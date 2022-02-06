@@ -41,6 +41,7 @@ $(function()
 	  });
 
 	  walker.on('end', function() {
+		  console.log(files);
 	  });
 	}
 	
