@@ -41,9 +41,10 @@ $(function()
 	  });
 
 	  walker.on('end', function() {
-	      	var songs = files.
 	  });
 	}
+	
+	var songs = files.
 	
 	function shuffle(a) {
 		var j, x, i;
