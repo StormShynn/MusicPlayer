@@ -32,7 +32,7 @@ $(function()
 	  var files   = [];
 
 	  // Walker options
-	  var walker  = walk.walk("Musics", { followLinks: false });
+	  var walker  = walk.walk("./Musics", { followLinks: false });
 
 	  walker.on('file', function(root, stat, next) {
 	      // Add this file to the list of files
