@@ -20,12 +20,30 @@ $(function()
 	
 	var playPreviousTrackButton = $('#play-previous'), playNextTrackButton = $('#play-next'), currIndex = -1;
 	
-	var songs = [{
-		artist: "Dig Didzay",
-		name: "Nếu Anh Đi (Cover)",
-		url: "Musics/NeuAnhDi.mp3",
-		picture: "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg"
-	}];
+// 	var songs = [{
+// 		artist: "Dig Didzay",
+// 		name: "Nếu Anh Đi (Cover)",
+// 		url: "Musics/NeuAnhDi.mp3",
+// 		picture: "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg"
+// 	}];
+	
+	function getAllFilesFromFolder(){
+	  var walk    = require('walk');
+	  var files   = [];
+
+	  // Walker options
+	  var walker  = walk.walk("Musics", { followLinks: false });
+
+	  walker.on('file', function(root, stat, next) {
+	      // Add this file to the list of files
+	      files.push(root + '/' + stat.name);
+	      next();
+	  });
+
+	  walker.on('end', function() {
+	      	var songs = files.
+	  });
+	}
 	
 	function shuffle(a) {
 		var j, x, i;
